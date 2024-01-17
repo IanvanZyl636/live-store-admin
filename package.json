@@ -24,7 +24,7 @@
     "start:custom": "cross-env node --preserve-symlinks --trace-warnings index.js",
     "dev": "cross-env npm run build:server && medusa develop",
     "docker-build": "docker-compose build --no-cache",
-    "docker-start": "cross-env docker compose up -d --no-deps --build"
+    "docker-start": "docker compose up -d --no-deps --build"
   },
   "dependencies": {
     "@medusajs/admin": "7.1.10",

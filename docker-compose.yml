@@ -9,6 +9,7 @@ services:
       - "9000:9000"
     environment:
       DATABASE_TYPE: 'postgres'
+      DATABASE_URL: 'YOUR POSTGRES CONNECTION STRING'
       MEDUSA_ADMIN_ONBOARDING_TYPE: 'nextjs'
       STORE_CORS: 'http://localhost:8000,http://localhost:7001'
       MEDUSA_ADMIN_ONBOARDING_NEXTJS_DIRECTORY: 'live-store-storefront'
