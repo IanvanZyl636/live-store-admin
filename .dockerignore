@@ -1,0 +1,12 @@
+node_modules
+.cache
+.github
+.vscode
+build
+dist
+uploads
+.env
+.env.template
+docker-compose.yml
+Dockerfile
+README.md

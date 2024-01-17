@@ -1,0 +1,18 @@
+version: "3"
+services:
+  live-store-backend:
+    container_name: "live-store-backend"
+    image: "live-store-backend"
+    build:
+      context: .
+    ports:
+      - "9000:9000"
+    environment:
+      DATABASE_TYPE: 'postgres'
+      MEDUSA_ADMIN_ONBOARDING_TYPE: 'nextjs'
+      STORE_CORS: 'http://localhost:8000,http://localhost:7001'
+      MEDUSA_ADMIN_ONBOARDING_NEXTJS_DIRECTORY: 'live-store-storefront'
+      JWT_SECRET: 'asdasdasdas'
+      COOKIE_SECRET: 'asdasdasdas'
+      NODE_ENV: 'production'
+      NPM_CONFIG_PRODUCTION: false

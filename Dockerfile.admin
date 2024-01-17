@@ -1,0 +1,19 @@
+#FROM node:lts-slim as builder
+#WORKDIR /app
+#
+#COPY package.json ./
+#RUN npm i
+#COPY . .
+#RUN npm run build
+
+#FROM node:lts as runner
+#WORKDIR /app
+#
+#COPY . .
+#
+#RUN npm install
+#
+#CMD ["npm", "start"]
+
+FROM nginx
+COPY ../build /usr/share/nginx/html
